@@ -1,0 +1,2 @@
+[2020-08-06 13:38:55] layer "info@drsemna.com راسلنا على": Expected end of input but "\u0631" found.
+[2020-08-06 13:38:55] layer "Prof. Dr.i MAHMOUD ZAKRIA": Expected end of input but "M" found.
