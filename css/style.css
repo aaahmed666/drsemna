@@ -197,6 +197,7 @@ main {
 @media (max-width:575px) {
     .logo .image img {
         max-width: 100%;
+        width: 300px;
     }
 }
 /* End logo */
@@ -424,6 +425,10 @@ main {
     margin-bottom: 44px;
     line-height: 34px;
     font-weight: 400;
+}
+
+.swiper .info {
+    display: flex;
 }
 
 .swiper .info .btn-1 {
@@ -654,6 +659,10 @@ main {
         margin-bottom: 10px;
     }
     .main-service .image {
+        width: 150px;
+        height: 150px;
+    }
+    .main-service .image {
         max-width: 100%;
     }
     .main-service .swiper-pagination {
@@ -695,10 +704,12 @@ main {
 
 @media (max-width:575px) {
     .informaton .image img {
+        margin-bottom: 15px;
         max-width: 100%;
     }
     .informaton .text {
         width: 100%;
+        padding-bottom: 20px;
     }
 }
 
@@ -965,7 +976,7 @@ main {
 .more-service .image {
     width: 210px;
     height: 211px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -1055,6 +1066,10 @@ main {
     .more-service h2 {
         font-size: 25px;
         padding-bottom: 10px;
+    }
+    .more-service .image {
+        width: 150px;
+        height: 150px;
     }
     .more-service .image {
         max-width: 100%;
@@ -1817,7 +1832,11 @@ table tfoot .two {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px 20px 40px 20px;
     }
+    .news .date {
+        margin: 0;
+    }   
 }
 
 /* End news */

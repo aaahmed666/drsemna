@@ -11,7 +11,7 @@ var swiper = new Swiper(".side-main", {
 });
 
 var swiper = new Swiper(".main-service", {
-    slidesPerView: 1,
+    slidesPerView: 2,
         autoplay: {
         delay: 2500,
         },
@@ -22,7 +22,7 @@ var swiper = new Swiper(".main-service", {
 });
 
 var swiper = new Swiper(".more-service", {
-    slidesPerView: 1,
+    slidesPerView: 2,
         autoplay: {
         delay: 2500,
         },
