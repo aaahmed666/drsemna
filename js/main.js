@@ -35,15 +35,35 @@ var swiper = new Swiper(".more-service", {
 
 
 
-var swiper = new Swiper(".testimonial", {
+var swiper = new Swiper(".testi", {
     slidesPerView: 1,
     autoplay: {
         delay: 3500,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".testimonials .swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            567: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+            1199: {
+              slidesPerView: 2,
+            },
+          },
 });
 
 var swiper = new Swiper(".articals", {
@@ -89,7 +109,7 @@ var swiper = new Swiper(".partner", {
         },
         breakpoints: {
             0: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
             567: {
               slidesPerView: 2,
