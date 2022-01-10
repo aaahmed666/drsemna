@@ -411,13 +411,6 @@ main {
     transform: translateY(-50%);
 }
 
-@media(max-width:767px) {
-    .swiper .slide .text {
-        width: 100%;
-        margin: 0;
-    }
-}
-
 .swiper .slide h1 {
     color: #FFF;
     margin-bottom: 20px;
@@ -506,6 +499,10 @@ main {
 }
 
 @media (max-width:767px) {
+    .swiper .slide .text {
+        width: 100%;
+        margin: 0;
+    }
     .swiper .slide h1 {
         font-size: 25px;
     }
@@ -538,19 +535,12 @@ main {
         line-height: unset;
     }
     .swiper .info .btn-1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 140px;
         margin: auto;
-        margin-bottom: 10px;
         height: 35px;
         font-size: 15px;
     }
     .swiper .info .btn-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin: auto;
         height: 35px;
         width: 140px;
