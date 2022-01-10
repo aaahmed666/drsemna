@@ -254,7 +254,9 @@ main {
 
 .nav .btn {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 140px;
     height: 40px;
     background-color: var(--main-color);
@@ -431,7 +433,7 @@ main {
     color: var(--primary-color);
     margin-left: 10px;
     border: none;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 17px;
@@ -452,7 +454,7 @@ main {
     background-color: var(--main-color);
     z-index: 2;
     color: #FFF;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -529,6 +531,9 @@ main {
         line-height: unset;
     }
     .swiper .info .btn-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 140px;
         margin: auto;
         margin-bottom: 10px;
@@ -536,6 +541,9 @@ main {
         font-size: 15px;
     }
     .swiper .info .btn-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
         height: 35px;
         width: 140px;
@@ -753,6 +761,9 @@ main {
 }
 
 .informaton .contact .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--main-color);
     color: #FFF;
     width: 180px;
@@ -842,6 +853,9 @@ main {
 }
 
 .about .about-dr .info .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 180px;
     height: 45px;
     background-color: #FFF;
@@ -977,6 +991,9 @@ main {
 }
 
 .more-service .info .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 190px;
     height: 45px;
     background-color: #FFF;
@@ -1122,6 +1139,9 @@ main {
 }
 
 .fitness .info .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 130px;
     height: 45px;
     background-color: var(--main-color);
@@ -1337,6 +1357,9 @@ table tfoot .two {
 }
 
 .sign .info .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 130px;
     height: 45px;
     background-color: var(--main-color);
@@ -1384,6 +1407,9 @@ table tfoot .two {
     .sign {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .sign h5 {
+        margin-top: 10px;
     }
 }
 
