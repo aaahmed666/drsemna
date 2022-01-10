@@ -1,7 +1,7 @@
 //for swiper
 var swiper = new Swiper(".side-main", {
     slidesPerView: 1,
-    autoplay: {
+        autoplay: {
         delay: 2500,
         },
         pagination: {
@@ -9,6 +9,31 @@ var swiper = new Swiper(".side-main", {
             clickable: true,
         },
 });
+
+var swiper = new Swiper(".main-service", {
+    slidesPerView: 1,
+        autoplay: {
+        delay: 2500,
+        },
+        pagination: {
+            el: ".main-service .swiper-pagination",
+            clickable: true,
+        },
+});
+
+var swiper = new Swiper(".more-service", {
+    slidesPerView: 1,
+        autoplay: {
+        delay: 2500,
+        },
+        pagination: {
+            el: ".more-service .swiper-pagination",
+            clickable: true,
+        },
+});
+
+
+
 
 var swiper = new Swiper(".testimonial", {
     slidesPerView: 1,
@@ -22,14 +47,34 @@ var swiper = new Swiper(".testimonial", {
 });
 
 var swiper = new Swiper(".articals", {
-    slidesPerView: 1,
+    slidesPerView: 3,
     autoplay: {
         delay: 4000,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".artical .swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            567: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+            1199: {
+              slidesPerView: 3,
+            },
+          },
 });
 
 var swiper = new Swiper(".partner", {
@@ -74,11 +119,13 @@ $(document).ready(function() {
     //for show-popup
     $('.show-popup').click(function (){
         $('.popup').fadeIn();
+        $('.no-show').fadeIn();
     });
     $('.popup').click(function (){
         $(this).fadeOut();
+        $('.no-show').fadeOut();
     });
-    $('.popup .inner').click(function(e) {
+    $('.list .inner').click(function(e) {
         e.stopPropagation();
     });
     $('.close').click(function (){
