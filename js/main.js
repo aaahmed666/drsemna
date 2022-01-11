@@ -130,28 +130,26 @@ var swiper = new Swiper(".partner", {
           },
 });
 
+let menu = document.querySelector(".menu-btn");
+let nav = document.querySelector(".list ul");
+let close = document.querySelector(".close-btn")
+
+menu.onclick = function () {
+    nav.classList.add("open");
+};
+
+close.onclick = function () {
+    this.parentElement.classList.remove("open");
+};
+
+document.onkeyup = function (e) {
+    if (e.key === "Escape") {
+        nav.classList.remove("open");
+    }
+};
+
+
 $(document).ready(function() {
-    //for active menu
-    $('.list li').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');
-    });
-
-    //for show-popup
-    $('.show-popup').click(function (){
-        $('.popup').fadeIn();
-        $('.no-show').fadeIn();
-    });
-    $('.popup').click(function (){
-        $(this).fadeOut();
-        $('.no-show').fadeOut();
-    });
-    $('.list .inner').click(function(e) {
-        e.stopPropagation();
-    });
-    $('.close').click(function (){
-        $('.popup').fadeOut();
-    });
-
 
     //for active menu in popup
     $('.inner li').click(function () {
