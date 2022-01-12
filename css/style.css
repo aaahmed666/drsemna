@@ -867,7 +867,7 @@ main {
     font-weight: 500;
     transition: all 0.3s ease-in-out;
     line-height: 1;
-    vertical-align: central;
+    text-align: center;
 }
 
 .about .about-dr .info .btn:hover {
@@ -947,8 +947,9 @@ main {
     }
     .about .about-dr .info .btn {
         width: 150px;
-        height: 30px;
+        /* height: 30px; */
         font-size: 15px;
+        height: auto;
     }
     .about .about-dr .body .center:last-child {
         margin-bottom: 20px;
