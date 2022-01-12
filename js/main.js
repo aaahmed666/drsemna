@@ -129,8 +129,8 @@ var swiper = new Swiper(".partner", {
                 spaceBetween: 30,
               },
             1199: {
-              slidesPerView: 5,
-              spaceBetween: 50,
+              slidesPerView: 6,
+              spaceBetween: 10,
             },
           },
 });
