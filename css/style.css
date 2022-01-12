@@ -187,9 +187,6 @@ main {
 }
 
 @media (max-width:576px) {
-    .upper-logo {
-        background-color: transparent;
-    }
     .upper-logo i:hover {
         background-color: #FFF;
         color: var(--primary-color);
@@ -215,7 +212,7 @@ main {
 /* End logo */
 /* start nav */
 .nav {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 .nav .list {
@@ -319,7 +316,7 @@ main {
     }
     .nav .list ul.no-show {
         display: none;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
     .nav .list ul.no-show.open {
         display: flex;
@@ -334,16 +331,27 @@ main {
         text-align: center;
         box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
         padding: 0 15px;
-        transform: translateY(0);
+        transform: translateX(0);
+        justify-content: center;
+        gap: 10px;
+        align-items: flex-start;
+        transition: 0.5s all ease-in-out;
     }
     .list .close-btn {
         display: block;
         position: fixed;
-        top: 20px;
-        right: 20px;
-        color: red;
-        width: 100px;
-        height: 100px;
+        top: 50px;
+        left: 20px;
+        transition: 0.3s all ease-in-out;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+    .list .close-btn:hover {
+        color: var(--main-color);
+        transform: rotate(90deg);
+    }
+    .nav .list li.active::after {
+        display: none;
     }
 }
 
@@ -651,20 +659,6 @@ main {
     width: 654px;
 }
 
-@media (max-width:767px) {
-    .informaton {
-        flex-direction: column;
-    }
-    .informaton .image img {
-        margin-bottom: 15px;
-        max-width: 100%;
-    }
-    .informaton .text {
-        padding-bottom: 20px;
-        width: 100%;
-    }
-}
-
 .informaton h3 {
     width: 135px;
     height: 35px;
@@ -700,6 +694,10 @@ main {
     justify-content: flex-start;
 }
 
+.informaton .sub-title.last {
+    margin-bottom: 32px;
+}
+
 .informaton .sub-title .icon i {
     margin-left: 16px;
     color: var(--main-color);
@@ -730,7 +728,6 @@ main {
     color: #FFF;
     width: 180px;
     height: 45px;
-    margin-top: 32px;
     font-size: 17px;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
@@ -738,6 +735,20 @@ main {
 
 .informaton .contact .btn:hover {
     background-color: var(--primary-color);
+}
+
+@media (max-width:767px) {
+    .informaton {
+        flex-direction: column;
+    }
+    .informaton .image img {
+        margin-bottom: 15px;
+        max-width: 100%;
+    }
+    .informaton .text {
+        padding-bottom: 20px;
+        width: 100%;
+    }
 }
 
 @media (max-width:575px) {
@@ -925,8 +936,8 @@ main {
         margin-bottom: 10px;
     }
     .about .about-dr .info .btn {
-        width: 160px;
-        height: 35px;
+        width: 150px;
+        height: 30px;
         font-size: 15px;
     }
     .about .about-dr .body .center:last-child {
