@@ -1497,6 +1497,10 @@ table tfoot .two {
     padding-bottom: 50px
 }
 
+.testimonials .swiper-slide {
+    margin: auto;
+}
+
 .testimonials .box {
     display: flex;
     flex-direction: column;
@@ -1504,8 +1508,8 @@ table tfoot .two {
     background-color: #FFF;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border: 2px solid #ffffff;
+    margin: auto;
     border-radius: 20px;
-    margin: 0 auto 20px;
 }
 
 .testimonials .box .title {
@@ -1594,9 +1598,9 @@ table tfoot .two {
 .artical .box {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    margin-bottom: 50px;
     max-width: 360px;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .artical .date {

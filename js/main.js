@@ -62,7 +62,12 @@ var swiper = new Swiper(".testi", {
               },
             1199: {
               slidesPerView: 2,
+              spaceBetween: 30,
             },
+            1399: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
           },
 });
 
