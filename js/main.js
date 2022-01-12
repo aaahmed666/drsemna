@@ -180,13 +180,13 @@ $(document).ready(function() {
 
     //for footer 
     $('.footer .link').click (function () {
-        $('.footer .link .title i').toggleClass('fa-angle-double-down fa-angle-double-up');
-        $('.footer .link .go').slideToggle();
+        $('.footer .link .title i').toggleClass('fa-chevron-down fa-chevron-up');
+        $('.footer .link .go').toggleClass('footerOpen');
     });
 
     $('.footer .center').click (function () {
-        $('.footer .center .title i').toggleClass('fa-angle-double-down fa-angle-double-up');
-        $('.footer .center .sub').slideToggle();
+        $('.footer .center .title i').toggleClass('fa-chevron-down fa-chevron-up');
+        $('.footer .center .sub').toggleClass('footerOpen');
     });
 
     //for button

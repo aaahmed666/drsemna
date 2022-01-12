@@ -2140,7 +2140,12 @@ table tfoot .two {
         justify-content: space-between;
     }
     .footer .go {
-        display: none;
+        overflow: hidden;
+        transition: 3s;
+        max-height: 0;
+    }
+    .footer .go.footerOpen {
+        max-height: 5000px;
     }
     .footer .center .sub {
         gap: 0;
