@@ -47,10 +47,11 @@ var swiper = new Swiper(".testi", {
         breakpoints: {
             0: {
                 slidesPerView: 1,
+                spaceBetween: 10,
             },
             567: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             767: {
                 slidesPerView: 2,
@@ -83,10 +84,11 @@ var swiper = new Swiper(".articals", {
         breakpoints: {
             0: {
                 slidesPerView: 1,
+                spaceBetween: 10,
             },
             567: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             767: {
                 slidesPerView: 2,
@@ -115,14 +117,15 @@ var swiper = new Swiper(".partner", {
         breakpoints: {
             0: {
                 slidesPerView: 2,
+                spaceBetween: 10,
             },
             567: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 15,
             },
             767: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 15,
             },
             991: {
                 slidesPerView: 4,
