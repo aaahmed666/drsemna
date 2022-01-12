@@ -372,6 +372,8 @@ main {
         width: 120px;
         height: 30px;
         font-size: 14px;
+        line-height: 30px;
+        padding: 0;
     }
 }
 
@@ -527,12 +529,16 @@ main {
         margin: auto;
         height: 30px;
         font-size: 14px;
+        line-height: 30px;
+        padding: 0;
     }
     .swiper .info .btn-2 {
         margin: auto;
         height: 30px;
         width: 120px;
         font-size: 14px;
+        line-height: 30px;
+        padding: 0;
     }
 }
 
@@ -631,12 +637,13 @@ main {
 
 @media (max-width:567px) {
     .main-service {
-        padding-top: 10px;
+        padding-top: 40px;
         padding-bottom: 40px;
     }
     .main-service h2 {
         font-size: 22px;
         margin-bottom: 10px;
+        line-height: 1;
     }
     .main-service .box {
         padding: 0 15px;
@@ -792,12 +799,14 @@ main {
     }
     .informaton .text {
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
     .informaton .contact .btn {
         width: 160px;
         height: 35px;
         font-size: 15px;
+        padding: 0;
+        line-height: 35px;
     }
 }
 
@@ -849,7 +858,6 @@ main {
     color: var(--main-color);
     transition: all 0.3s;
 }
-
 
 .about .about-dr .center i:hover {
     background-color: var(--main-color);
@@ -928,14 +936,16 @@ main {
     }
     .about .image {
         position: static;
-        margin-top: 70px;
-        margin-right: 100px;
+        margin: 70px auto 30px;
     }
 }
 
 @media (max-width:575px) {
     .about {
-        padding-top: 40px;
+        padding-top: 30px;
+    }
+    .about .about-dr {
+        text-align: center;
     }
     .about .about-dr h4 {
         margin-bottom: 30px;
@@ -957,11 +967,15 @@ main {
         line-height: 1;
         margin-bottom: 10px;
     }
+    .about .about-dr .info {
+        margin: auto;
+    }
     .about .about-dr .info .btn {
         width: 150px;
-        /* height: 30px; */
+        height: 30px;
         font-size: 15px;
-        height: auto;
+        padding: 0;
+        line-height: 30px;
     }
     .about .about-dr .body .center:last-child {
         margin-bottom: 20px;
@@ -1080,7 +1094,7 @@ main {
 @media (max-width:567px) {
     .more-service {
         padding-top: 40px;
-        padding-bottom: 65px;
+        padding-bottom: 40px;
     }
     .more-service h2 {
         font-size: 22px;
@@ -1098,6 +1112,8 @@ main {
         height: 35px;
         margin-top: 0;
         font-size: 15px;
+        line-height: 35px;
+        padding: 0;
     }
 }
 
@@ -1254,6 +1270,8 @@ main {
         font-size: 15px;
         height: 35px;
         width: 100px;
+        padding: 0;
+        line-height: 35px;
     }
 }
 
@@ -1480,6 +1498,8 @@ table tfoot .two {
         font-size: 15px;
         height: 35px;
         width: 100px;
+        padding: 0;
+        line-height: 35px;
     }
 }
 
@@ -1580,8 +1600,8 @@ table tfoot .two {
 
 @media (max-width:576px) {
     .testimonials {
-        padding-bottom: 30px;
-        padding-top: 40px;
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
     .testimonials h2 {
         font-size: 22px;
@@ -1951,6 +1971,14 @@ table tfoot .two {
         align-items: center;
         text-align: center;
         flex-direction: column;
+    }
+    .news .inside p {
+        text-align: justify;
+        text-align-last: center;
+    }
+    .news .inside h5 {
+        text-align: justify;
+        text-align-last: center;
     }   
 }
 
