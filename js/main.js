@@ -193,16 +193,18 @@ $(document).ready(function() {
         }
     });
 
-    //for footer 
-    $('.footer .link').click (function () {
-        $('.footer .link .title i').toggleClass('fa-chevron-down fa-chevron-up');
-        $('.footer .link .go').toggleClass('footerOpen');
-    });
-
-    $('.footer .center').click (function () {
-        $('.footer .center .title i').toggleClass('fa-chevron-down fa-chevron-up');
-        $('.footer .center .sub').toggleClass('footerOpen');
-    });
+    //for footer
+    if($(window).width() < 767) {
+        $('.footer .link').click (function () {
+            $('.footer .link .title i').toggleClass('fa-chevron-down fa-chevron-up');
+            $('.footer .link .go').toggleClass('footerOpen');
+        });
+    
+        $('.footer .title').click (function () {
+            $('.footer .center .title i').toggleClass('fa-chevron-down fa-chevron-up');
+            $('.footer .center .sub').slideToggle();
+        });
+    } 
 
     //for button
     $('.btn').hover(function () {
@@ -214,28 +216,6 @@ $(document).ready(function() {
             width: 0
         },300);
       });
-    
-    //for owl-carosel
-    // $('.owl-carousel').owlCarousel({
-    //     stagePadding: 15,
-    //     loop:true,
-    //     margin:10,
-    //     nav:false,
-    //     autoplay: true,
-    //     autoplayTimeout: 1520,
-    //     smartSpeed: 1500,
-    //     animateIn: 'linear',
-    //     animateOut: 'linear',
-    //     responsive:{
-    //         0:{
-    //             items:1
-    //         },
-    //         767:{
-    //             items:3
-    //         },
-    //         1000:{
-    //             items:5
-    //         }
-    //     }
-    // })
+
+      $('.js-example-basic-multiple').select2();
 })

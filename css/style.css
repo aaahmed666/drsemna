@@ -200,13 +200,22 @@ main {
 @media (max-width:576px) {
     .upper-logo {
         display: none;
+        background-color: var(--primary-color);
     }
     .upper-logo .call {
         justify-content: flex-start;
         margin-bottom: 10px;
     }
     .upper-logo .social {
-        justify-content: center;
+        justify-content: flex-start;
+        width: 200px;
+        background-color: var(--main-color);
+    }
+    .upper-logo .mobile {
+        margin-bottom: 5px;
+    }
+    .upper-logo span {
+        margin: 0 9px 0 0;
     }
 }
 
@@ -509,6 +518,12 @@ main {
     background-color: #FFF;
 }
 
+@media (min-width:1200px) {
+    .side-main img {
+        width: 100%;
+    }
+}
+
 @media (max-width:991px) {
     .swiper .slide h1 {
         font-size: 32px;
@@ -799,6 +814,12 @@ main {
     display: none;
 }
 
+@media (min-width:1200px) {
+    .informaton .text {
+        width: 50%;
+    }
+}
+
 @media (max-width:767px) {
     .informaton {
         flex-direction: column;
@@ -968,16 +989,32 @@ main {
     position: absolute;
     content: "";
     background-color: var(--main-color);
-    width: 1500px;
+    width: 500%;
     height: 100%;
-    position: absolute;
+    display: block;
     top: 0;
     left: -1px;
     border-radius: 310px;
-    transform-origin: 23% 53%;
+    transform-origin: 310px 310px;
     transform: rotate(133deg);
     z-index: -1;
 }
+
+/* @media (max-width:1400px) {
+    .about .image span::after {
+        content: "";
+        background-color: var(--main-color);
+        width: 500%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: -1px;
+        border-radius: 310px;
+        transform-origin: 318px 313px;
+        transform: rotate(133deg);
+        z-index: -1;
+    }
+} */
 
 @media(max-width:1199px) {
     .about .about-dr {
@@ -1302,6 +1339,12 @@ main {
     margin-right: 97px;
 }
 
+@media (min-width:1200px) {
+    .fitness form {
+        width: 100%;
+    }
+}
+
 @media (max-width:1199px) {
     .fitness h2 {
         width: 360px;
@@ -1529,6 +1572,15 @@ table tfoot .two {
     z-index: -1;
 }
 
+@media (min-width:1200px) {
+    .sign form {
+        width: 100%;
+    }
+    .sign form.send {
+        width: 100%;
+    }
+}
+
 @media (max-width:1199px) {
     .sign {
         background: #FFF;
@@ -1676,7 +1728,7 @@ table tfoot .two {
         margin-bottom: 10px;
     }
     .testimonials .swiper-pagination {
-        bottom: -25px;
+        bottom: -35px;
     }
 }
 /* End testimonials */
@@ -1771,7 +1823,7 @@ table tfoot .two {
         margin-bottom: 10px;
     }
     .artical .swiper-pagination {
-        bottom: -30px;
+        bottom: 0;
     }
 }
 /* End artical */
@@ -1809,7 +1861,7 @@ table tfoot .two {
 }
 
 .partners .swiper-slide {
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
 .partners .swiper-pagination {
@@ -1934,6 +1986,12 @@ table tfoot .two {
     margin-bottom: 5px;
 }
 
+@media (min-width:1200px) {
+    .ask .box h6 {
+        width: 100%;
+    }
+}
+
 @media (max-width:1199px) {
     .ask .image {
         position: static;
@@ -2048,27 +2106,12 @@ table tfoot .two {
     line-height: 28px;
     font-weight: 400;
 }
-.news .move {
-    position: relative;
+
+.news .swiper {
+    display: none;
 }
 
-.news .swiper-slide {
-    padding: 20px;
-}
 
-.news .swiper-pagination {
-    bottom: 30px;
-}
-
-.news .swiper-pagination-bullet {
-    width: 15px;
-    height: 5px;
-    border-radius: 4px;
-}
-
-.news .swiper-pagination-bullet-active {
-    background-color: var(--main-color);
-}
 
 @media (max-width:767px) {
     .news .news-item {
@@ -2076,6 +2119,27 @@ table tfoot .two {
     }
     .news .swiper {
         display: block;
+    }
+    .news .move {
+        position: relative;
+    }
+    
+    .news .swiper-slide {
+        padding: 20px;
+    }
+    
+    .news .swiper-pagination {
+        bottom: 30px;
+    }
+    
+    .news .swiper-pagination-bullet {
+        width: 15px;
+        height: 5px;
+        border-radius: 4px;
+    }
+    
+    .news .swiper-pagination-bullet-active {
+        background-color: var(--main-color);
     }
 }
 
@@ -2130,6 +2194,13 @@ table tfoot .two {
     height: 250px;
 }
 /* End map */
+
+.select2-container--open .select2-dropdown--below {
+    border-top: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 /* Start footer */
 .footer {
     padding-top: 72px;
