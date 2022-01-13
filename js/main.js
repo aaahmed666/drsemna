@@ -11,7 +11,8 @@ var swiper = new Swiper(".side-main", {
 });
 
 var swiper = new Swiper(".main-service", {
-    slidesPerView: 2,
+    slidesPerView: 3,
+    spaceBetween: 0,
         autoplay: {
         delay: 2500,
         },
@@ -22,7 +23,7 @@ var swiper = new Swiper(".main-service", {
 });
 
 var swiper = new Swiper(".more-service", {
-    slidesPerView: 2,
+    slidesPerView: 3,
         autoplay: {
         delay: 2500,
         },
@@ -106,7 +107,7 @@ var swiper = new Swiper(".articals", {
 
 var swiper = new Swiper(".partner", {
     slidesPerView: 6,
-    spaceBetween: 30,
+    spaceBetween: 20,
     autoplay: {
         delay: 2000,
         },
@@ -116,11 +117,11 @@ var swiper = new Swiper(".partner", {
         },
         breakpoints: {
             0: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 10,
             },
             567: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 15,
             },
             767: {
@@ -138,16 +139,30 @@ var swiper = new Swiper(".partner", {
           },
 });
 
-let menu = document.querySelector(".menu-btn");
+var swiper = new Swiper(".news", {
+    slidesPerView: 1,
+        autoplay: {
+        delay: 2500,
+        },
+        pagination: {
+            el: ".news .swiper-pagination",
+            clickable: true,
+        },
+});
+
+let menu = document.querySelector(".icon");
 let nav = document.querySelector(".list ul");
+let upperlogo = document.querySelector('.upper-logo')
 let close = document.querySelector(".close-btn")
 
 menu.onclick = function () {
     nav.classList.add("open");
+    upperlogo.classList.add("open");
 };
 
 close.onclick = function () {
     this.parentElement.classList.remove("open");
+    upperlogo.classList.remove("open");
 };
 
 document.onkeyup = function (e) {
@@ -199,4 +214,28 @@ $(document).ready(function() {
             width: 0
         },300);
       });
+    
+    //for owl-carosel
+    // $('.owl-carousel').owlCarousel({
+    //     stagePadding: 15,
+    //     loop:true,
+    //     margin:10,
+    //     nav:false,
+    //     autoplay: true,
+    //     autoplayTimeout: 1520,
+    //     smartSpeed: 1500,
+    //     animateIn: 'linear',
+    //     animateOut: 'linear',
+    //     responsive:{
+    //         0:{
+    //             items:1
+    //         },
+    //         767:{
+    //             items:3
+    //         },
+    //         1000:{
+    //             items:5
+    //         }
+    //     }
+    // })
 })

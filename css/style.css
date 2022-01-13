@@ -179,6 +179,15 @@ main {
     display: none;
 }
 
+.upper-logo.open {
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    display: flex;
+    z-index: 9999;
+    width: 260px;
+}
+
 @media (max-width:992px) {
     .upper-logo .call {
         justify-content: center;
@@ -189,12 +198,15 @@ main {
 }
 
 @media (max-width:576px) {
-    .upper-logo i {
-        background-color: var(--main-color);
+    .upper-logo {
+        display: none;
     }
-    .upper-logo i:hover {
-        background-color: #FFF;
-        color: var(--primary-color);
+    .upper-logo .call {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+    .upper-logo .social {
+        justify-content: center;
     }
 }
 
@@ -207,11 +219,7 @@ main {
 
 @media (max-width:575px) {
     .logo {
-        padding: 15px 0;
-    }
-    .logo .image img {
-        max-width: 100%;
-        width: 200px;
+        display: none;
     }
 }
 /* End logo */
@@ -224,6 +232,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav .list .image {
+    display: none;
 }
 
 .nav .icon {
@@ -368,6 +380,26 @@ main {
 }
 
 @media (max-width:576px) {
+    .nav {
+        padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 55;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+        background-color: var(--theme-color);
+    }
+    .nav .list .image {
+        display: block;
+        max-width: 100%;
+        padding: 0 5px;
+    }
+    .nav .list .image img {
+        display: block;
+        max-width: 100%;
+    }
+    .nav .list {
+        height: 50px;
+    }
     .nav .btn {
         width: 120px;
         height: 30px;
@@ -509,12 +541,6 @@ main {
     .side-main img {
         min-height: 200px;
     }
-    .upper-logo .call {
-        display: none;
-    }
-    .upper-logo .social {
-        justify-content: space-between;
-    }
     .swiper .slide h1 {
         font-size: 20px;
         margin-bottom: 10px;
@@ -637,8 +663,14 @@ main {
 
 @media (max-width:567px) {
     .main-service {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main-service .swiper {
+        padding: 30px 0;
+    }
+    .main-service a {
+        display: block;
     }
     .main-service h2 {
         font-size: 22px;
@@ -646,14 +678,13 @@ main {
         line-height: 1;
     }
     .main-service .box {
-        padding: 0 15px;
+        padding: 0 3px;
     }
     .main-service .image {
-        width: 150px;
-        height: 150px;
-    }
-    .main-service .image {
+        width: 120px;
+        height: 120px;
         max-width: 100%;
+        padding: 20px;
     }
     .main-service .swiper-pagination {
         bottom: 10px;
@@ -764,6 +795,10 @@ main {
     background-color: var(--primary-color);
 }
 
+.informaton .image-respo {
+    display: none;
+}
+
 @media (max-width:767px) {
     .informaton {
         flex-direction: column;
@@ -779,6 +814,18 @@ main {
 }
 
 @media (max-width:575px) {
+    .informaton {
+        background-color: var(--theme-color);
+    }
+    .informaton .image {
+        display: none;
+    }
+    .informaton .image-respo {
+        display: block;
+    }
+    .informaton .image-respo img {
+        max-width: 100%;
+    }
     .informaton h3 {
         width: 130px;
         font-size: 16px;
@@ -799,6 +846,7 @@ main {
     }
     .informaton .text {
         width: 100%;
+        padding-top: 50px;
         padding-bottom: 30px;
     }
     .informaton .contact .btn {
@@ -823,6 +871,10 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
     width: 555px;
+}
+
+.about .about-dr .image-sayed {
+    display: none;
 }
 
 .about .about-dr h2 {
@@ -942,13 +994,23 @@ main {
 
 @media (max-width:575px) {
     .about {
-        padding-top: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--primary-color);
     }
     .about .about-dr {
         text-align: center;
     }
+    .about .about-dr .image-sayed {
+        display: block;
+    }
+    .about .about-dr .image-sayed img {
+        max-width: 100%;
+    }
     .about .about-dr h4 {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        text-align: justify;
+        text-align-last: center;
     }
     .about .about-dr h2 {
         font-size: 22px;
@@ -967,6 +1029,10 @@ main {
         line-height: 1;
         margin-bottom: 10px;
     }
+    .about .about-dr .center h6 {
+        text-align: justify;
+        text-align-last: center;
+    }
     .about .about-dr .info {
         margin: auto;
     }
@@ -979,6 +1045,9 @@ main {
     }
     .about .about-dr .body .center:last-child {
         margin-bottom: 20px;
+    }
+    .about .image {
+        display: none;
     }
 }
 
@@ -1093,19 +1162,24 @@ main {
 
 @media (max-width:567px) {
     .more-service {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .more-service a {
+        display: block;
     }
     .more-service h2 {
         font-size: 22px;
         margin-bottom: 10px;
     }
     .more-service .image {
-        width: 150px;
-        height: 150px;
-    }
-    .more-service .image {
+        width: 120px;
+        height: 120px;
         max-width: 100%;
+        padding: 20px;
+    }
+    .more-service .box {
+        padding: 0 3px;
     }
     .more-service .info .btn {
         width: 160px;
@@ -1523,15 +1597,9 @@ table tfoot .two {
     position: relative;
 }
 
-.testimonials .slide {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 50px
-}
-
 .testimonials .swiper-slide {
     margin: auto;
+    padding: 10px;
 }
 
 .testimonials .box {
@@ -1620,6 +1688,10 @@ table tfoot .two {
 
 .artical .move {
     position: relative;
+}
+
+.artical .swiper-slide {
+    padding: 10px;
 }
 
 .artical h2 {
@@ -1729,6 +1801,15 @@ table tfoot .two {
     background-color: #FFF;
     overflow: hidden;
     margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.partners .swiper-slide a:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.partners .swiper-slide {
+    padding: 20px 0;
 }
 
 .partners .swiper-pagination {
@@ -1756,8 +1837,12 @@ table tfoot .two {
     }
     .partners .swiper-slide a {
         justify-content: center;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+    }
+    .partners img {
+        max-width: 100%;
     }
 } 
 /* End partners */
@@ -1791,6 +1876,11 @@ table tfoot .two {
     z-index: -1;
 }
 
+.ask .image-sayed {
+    display: none;
+}
+
+
 .ask .answer {
     display: flex;
     flex-direction: column;
@@ -1817,6 +1907,7 @@ table tfoot .two {
     color: var(--primary-color);
     background-color: #e9f5f8;
     cursor: pointer;
+    margin-bottom: 2px;
 }
 
 .ask h4 {
@@ -1840,6 +1931,7 @@ table tfoot .two {
     line-height: 26px;
     font-weight: 400;
     display: none;
+    margin-bottom: 5px;
 }
 
 @media (max-width:1199px) {
@@ -1862,8 +1954,18 @@ table tfoot .two {
 
 @media (max-width:575px) {
     .ask {
-        padding-top: 100px;
+        padding-top: 50px;
         padding-bottom: 0px;
+    }
+    .ask .image {
+        display: none;
+    }
+    .ask .image-sayed {
+        display: block;
+        margin-bottom: 25px;
+    }
+    .ask .image-sayed img {
+        max-width: 100%;
     }
     .ask h2 {
         font-size: 25px;
@@ -1946,11 +2048,45 @@ table tfoot .two {
     line-height: 28px;
     font-weight: 400;
 }
+.news .move {
+    position: relative;
+}
+
+.news .swiper-slide {
+    padding: 20px;
+}
+
+.news .swiper-pagination {
+    bottom: 30px;
+}
+
+.news .swiper-pagination-bullet {
+    width: 15px;
+    height: 5px;
+    border-radius: 4px;
+}
+
+.news .swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+}
+
+@media (max-width:767px) {
+    .news .news-item {
+        display: none;
+    }
+    .news .swiper {
+        display: block;
+    }
+}
 
 @media (max-width:567px) {
     .news {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .news .swiper {
+        padding-top: 0;
+        padding-bottom: 30px;
     }
     .news h2 {
         font-size: 22px;
@@ -1981,6 +2117,11 @@ table tfoot .two {
         text-align-last: center;
     }   
 }
+
+
+/* .owl-carousel .owl-stage{
+    transform:translate3d(0,0,0) !important;
+  } */
 
 /* End news */
 /* Start map */

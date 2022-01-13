@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>drsemna</title>
@@ -76,12 +80,15 @@
         </div>
         <!-- End logo  -->
         <!-- Start nav -->
-        <div class="nav">
+        <div class="nav sticky-header">
             <div class="container">
                 <div class="list">
                     <div class="icon">
                         <i class="menu-btn fas fa-bars"></i>
                         <p>القائمة</p>
+                    </div>
+                    <div class="image">
+                        <img src="image/logo.png" alt="">
                     </div>
                     <ul class="list-unstyled no-show">
                         <li class="active"><a href="#"></a>الرئيسية</li>
@@ -268,9 +275,7 @@
         <div class="informaton">
             <div class="over-lay"></div>
             <div class="image">
-                <a href="#">
-                    <img src="image/about.png" alt="">
-                </a>
+                <img src="image/about.png" alt="">
             </div>
             <div class="container">
                 <div class="text">
@@ -341,7 +346,9 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="image-respo">
+                <img src="image/about.png" alt="">
+            </div>
         </div>
         <!-- End informaton -->
         <!-- Start about -->
@@ -351,6 +358,9 @@
                     <div class="main">
                         <div class="title">
                             <h2 class="fw-bold">معلومات عن مركز الدكتور محمود</h2>
+                        </div>
+                        <div class="image-sayed">
+                            <img src="image/sayed-1.png" alt="">
                         </div>
                         <div class="sub-title">
                             <h4>يتميز مركز د.محمود الجنزوري بالإلتزام فى المواعيد و أعلى معايير من النظافة و الأمان كما تشمل اطباء الجراحة و اطباء التخدير و اطباء التغذية العلاجية</h4>
@@ -1011,6 +1021,9 @@
                 <img src="image/faq.png" alt="">
             </div>
             <div class="container">
+                <div class="image-sayed">
+                    <img src="image/sayed-2.png" alt="">
+                </div>
                 <div class="answer">
                     <h2 class="fw-bold">أسئلة وأجوبة متكررة</h2>
                     <div class="box">
@@ -1049,39 +1062,122 @@
         <div class="news">
             <h2 class="fw-bold text-center">آخر أخبار الدكتور</h2>
             <div class="container">
-                <div class="box">
-                    <div class="date">
-                        <p class="num">25</p>
-                        <p class="mon">يوليو</p>
+                <div class="news-item">
+                    <div class="box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
                     </div>
-                    <div class="inside">
-                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
-                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                    <div class="box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="date">
-                        <p class="num">25</p>
-                        <p class="mon">يوليو</p>
+                <div class="move">
+                    <div class="swiper mySwiper news">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="date">
+                                        <p class="num">25</p>
+                                        <p class="mon">يوليو</p>
+                                    </div>
+                                    <div class="inside">
+                                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="date">
+                                        <p class="num">25</p>
+                                        <p class="mon">يوليو</p>
+                                    </div>
+                                    <div class="inside">
+                                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="date">
+                                        <p class="num">25</p>
+                                        <p class="mon">يوليو</p>
+                                    </div>
+                                    <div class="inside">
+                                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="inside">
-                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
-                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="date">
-                        <p class="num">25</p>
-                        <p class="mon">يوليو</p>
-                    </div>
-                    <div class="inside">
-                        <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
-                        <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
         <!-- End news -->
+        <!-- Start owl -->
+        <!-- <div class="owl">
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    <div class="item box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
+                    </div>
+                    <div class="item box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
+                    </div>
+                    <div class="item box">
+                        <div class="date">
+                            <p class="num">25</p>
+                            <p class="mon">يوليو</p>
+                        </div>
+                        <div class="inside">
+                            <p>خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً</p>
+                            <h5>هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End owl -->
         <!-- Start map -->
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13807.393586286962!2d31.3244876!3d30.0985279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ce8b351dcd81a7c!2z2K_Zg9iq2YjYsSDZhdit2YXZiNivINiy2YPYsdmK2KcgLSDYo9iz2KrYp9iwINis2LHYp9it2KfYqiDYp9mE2LPZhdmG2Kkg2YjYrNix2KfYrdin2Kog2KfZhNiz2YPYsSAoINiq2YPZhdmK2YUg2KfZhNmF2LnYr9ipLdiq2K3ZiNmK2YQg2KfZhNmF2LPYp9ixKQ!5e0!3m2!1sen!2seg!4v1641348524610!5m2!1sen!2seg"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -1172,7 +1268,9 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/jQuery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
