@@ -979,7 +979,7 @@ main {
 
 .about .image span {
     position: relative;
-    display: block;
+    display: inline-block;
 }
 
 .about .image span::after {
@@ -1325,6 +1325,10 @@ main {
     top: 85%;
     width: 0;
     margin-left: 20px;
+}
+
+.select2-container {
+    width: 100% !important;
 }
 
 .fitness .info .btn {
@@ -1942,7 +1946,12 @@ table tfoot .two {
     top: 63px;
 }
 
-.ask .image::after {
+.ask .image span {
+    position: relative;
+    display: inline-block;
+}
+
+.ask .image span::after {
     position: absolute;
     content: "";
     width: 500%;
@@ -1952,7 +1961,7 @@ table tfoot .two {
     top: 1px;
     left: 0;
     border-radius: 310px;
-    transform-origin: 345px 385px;
+    transform-origin: 310px 310px;
     background-color: var(--main-color);
     transform: rotate(50deg);
     z-index: -1;
@@ -2263,6 +2272,10 @@ table tfoot .two {
     display: flex;
 }
 
+.footer i.fa-chevron-down {
+    display: none;
+}
+
 .footer .social i {
     width: 30px;
     height: 30px;
@@ -2354,6 +2367,12 @@ table tfoot .two {
     }
 }
 
+@media (max-width:767px) {
+    .footer i.fa-chevron-down {
+        display: block;
+    }
+}
+
 @media (max-width:576px) {
     .footer {
         padding: 50px 0 30px 0;
@@ -2371,9 +2390,6 @@ table tfoot .two {
         justify-content: center;
         align-items: center;
     }
-    .footer .logo-2 img {
-        width: 200px;
-    }
     .footer .link {
         width: 100%;
     }
@@ -2382,12 +2398,7 @@ table tfoot .two {
         justify-content: space-between;
     }
     .footer .go {
-        overflow: hidden;
-        transition: 3s;
-        max-height: 0;
-    }
-    .footer .go.footerOpen {
-        max-height: 5000px;
+        display: none;
     }
     .footer .center .sub {
         gap: 0;

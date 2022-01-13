@@ -195,12 +195,12 @@ $(document).ready(function() {
 
     //for footer
     if($(window).width() < 767) {
-        $('.footer .link').click (function () {
+        $('.footer .link .title').click (function () {
             $('.footer .link .title i').toggleClass('fa-chevron-down fa-chevron-up');
-            $('.footer .link .go').toggleClass('footerOpen');
+            $('.footer .link .go').slideToggle();
         });
     
-        $('.footer .title').click (function () {
+        $('.footer .center .title').click (function () {
             $('.footer .center .title i').toggleClass('fa-chevron-down fa-chevron-up');
             $('.footer .center .sub').slideToggle();
         });
