@@ -217,5 +217,8 @@ $(document).ready(function() {
         },300);
       });
 
-      $('.js-example-basic-multiple').select2();
+      $('.say').select2();
+      $(".say").select2({
+        dir: "rtl"
+      });
 })
