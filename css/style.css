@@ -105,6 +105,18 @@ p {
         url("../fonts/Tajawal/Tajawal-ExtraLight.woff");
 }
 
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+}
+
 main {
     overflow: hidden;
 }
@@ -260,6 +272,7 @@ main {
     align-items: center;
     padding: 0;
     margin: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav .list li {
@@ -349,6 +362,7 @@ main {
     .nav .list ul.no-show {
         display: none;
         transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
     }
     .nav .list ul.no-show.open {
         display: flex;
@@ -359,15 +373,14 @@ main {
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 100;
+        z-index: 1050;
         text-align: center;
-        box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
+        /* box-shadow: 0 0 0 100vw rgba(0,0,0,0.7); */
         padding: 0 15px;
         transform: translateX(0);
         justify-content: start;
         gap: 10px;
         align-items: flex-start;
-        transition: 0.5s all ease-in-out;
         padding-top: 100px;
     }
     .list .close-btn {

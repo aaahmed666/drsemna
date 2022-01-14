@@ -150,19 +150,35 @@ var swiper = new Swiper(".news", {
         },
 });
 
+
+//for navbar in mobile
 let menu = document.querySelector(".icon");
 let nav = document.querySelector(".list ul");
 let upperlogo = document.querySelector('.upper-logo')
 let close = document.querySelector(".close-btn")
+let modal = document.createElement("div")
+modal.className = "popup"
+let overflow = document.createElement("div")
+overflow.className = "overflow"
 
 menu.onclick = function () {
     nav.classList.add("open");
     upperlogo.classList.add("open");
+    document.body.appendChild(modal);
+    document.body.style.overflow = "hidden";
 };
+
+modal.onclick = function () {
+    nav.classList.remove("open");
+    upperlogo.classList.remove("open");
+    modal.remove('.popup');
+}
 
 close.onclick = function () {
     this.parentElement.classList.remove("open");
     upperlogo.classList.remove("open");
+    modal.remove('.popup');
+    document.body.style.overflow = "auto";
 };
 
 document.onkeyup = function (e) {
@@ -173,6 +189,14 @@ document.onkeyup = function (e) {
 
 
 $(document).ready(function() {
+
+    // $('.icon').click (function (){
+    //     $('.popup').fadeIn();
+    // })
+
+    // $('.close-btn').click (function (){
+    //     $('.popup').fadeOut();
+    // })
 
     //for active menu in popup
     $('.inner li').click(function () {
