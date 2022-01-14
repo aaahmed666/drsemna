@@ -398,7 +398,7 @@ main {
         background-color: var(--theme-color);
     }
     .nav .image a {
-        display: block;
+        display: blockf;
     }
     .nav .list .image {
         display: block;
@@ -433,6 +433,10 @@ main {
 
 .side-main img {
     max-width: 100%;
+}
+
+.side-main .image.sayed {
+    display: none;
 }
 
 .swiper .slide .text {
@@ -556,30 +560,15 @@ main {
 }
 
 @media(max-width:576px) {
-    .swiper .slide h1 {
-        font-size: 20px;
-        margin: 0;
+    
+    .side-main a .image {
+        display: none;
     }
-    .swiper .slide h4 {
-        font-size: 12px;
-        margin: 0;
-        line-height: unset;
+    .side-main .image.sayed {
+        display: block;
     }
-    .swiper .info .btn-1 {
-        width: 120px;
-        margin: auto;
-        height: 30px;
-        font-size: 14px;
-        line-height: 30px;
-        padding: 0;
-    }
-    .swiper .info .btn-2 {
-        margin: auto;
-        height: 30px;
-        width: 120px;
-        font-size: 14px;
-        line-height: 30px;
-        padding: 0;
+    .side-main .text {
+        display: none;
     }
 }
 
@@ -683,6 +672,9 @@ main {
     }
     .main-service .swiper {
         padding: 30px 0;
+    }
+    .main-service .text h3 {
+        margin-top: 10px;
     }
     .main-service a {
         display: block;
@@ -1000,22 +992,6 @@ main {
     z-index: -1;
 }
 
-/* @media (max-width:1400px) {
-    .about .image span::after {
-        content: "";
-        background-color: var(--main-color);
-        width: 500%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: -1px;
-        border-radius: 310px;
-        transform-origin: 318px 313px;
-        transform: rotate(133deg);
-        z-index: -1;
-    }
-} */
-
 @media(max-width:1199px) {
     .about .about-dr {
         width: 100%;
@@ -1051,7 +1027,7 @@ main {
     }
     .about .about-dr h2 {
         font-size: 22px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     .about .image img {
         max-width: 100%;
@@ -1201,6 +1177,14 @@ main {
     .more-service {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .more-service .swiper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .more-service .text h3 {
+        margin-top: 10px;
+        font-size: 15px;
     }
     .more-service a {
         display: block;
@@ -1652,7 +1636,7 @@ table tfoot .two {
     }
     .sign h2 {
         font-size: 22px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .sign h2::after {
         bottom: -10px;
@@ -2079,7 +2063,7 @@ table tfoot .two {
         padding: 15px 20px 0 20px;
     }
     .ask h4 {
-        padding: 15px 10px 15px 0;
+        padding: 15px 10px 15px 10px;
     }
     .ask i {
         padding: 12px 0 20px 12px;
