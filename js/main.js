@@ -172,6 +172,7 @@ modal.onclick = function () {
     nav.classList.remove("open");
     upperlogo.classList.remove("open");
     modal.remove('.popup');
+    document.body.style.overflow = "auto";
 }
 
 close.onclick = function () {
