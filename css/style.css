@@ -191,14 +191,7 @@ main {
     display: none;
 }
 
-.upper-logo.open {
-    position: fixed;
-    bottom: 10%;
-    right: 0;
-    display: flex;
-    z-index: 9999;
-    width: 260px;
-}
+
 
 @media (max-width:992px) {
     .upper-logo .call {
@@ -211,8 +204,17 @@ main {
 
 @media (max-width:576px) {
     .upper-logo {
-        display: none;
+        position: fixed;
+        bottom: 10%;
+        right: -260px;
+        display: flex;
+        z-index: 9999;
+        width: 260px;
         background-color: var(--primary-color);
+        transition: all 1s ease;;
+    }
+    .upper-logo.open {
+        right: 0;
     }
     .upper-logo .call {
         justify-content: flex-start;
@@ -360,11 +362,8 @@ main {
         margin-right: 5px;
     }
     .nav .list ul.no-show {
-        display: none;
-        right: -100%;
+        right: -260px;
         transition: all 1s ease;
-    }
-    .nav .list ul.no-show.open {
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -372,25 +371,28 @@ main {
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0;
         z-index: 1050;
         text-align: center;
-        /* box-shadow: 0 0 0 100vw rgba(0,0,0,0.7); */
         padding: 0 15px;
-        right: 0;
         justify-content: start;
         gap: 10px;
         align-items: flex-start;
         padding-top: 100px;
     }
+    .nav .list ul.no-show.open {
+        right: 0;
+    }
     .list .close-btn {
-        display: block;
+        display: flex;
         position: fixed;
         top: 20px;
-        left: 35%;
-        transition: 0.3s all ease-in-out;
+        right: -260px;
+        transition: all 1s ease;
         cursor: pointer;
         color: var(--primary-color);
+    }
+    .list .close-btn.open {
+        right: 230px;
     }
     .list .close-btn:hover {
         color: var(--main-color);
@@ -714,10 +716,9 @@ main {
 /* End main-service */
 /* Start informaton */
 .informaton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    padding: 70px 0;
+    background-color: var(--theme-color);
 }
 
 .informaton .over-lay {
@@ -730,11 +731,18 @@ main {
     z-index: -1;
 }
 
+.informaton .image {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
 .informaton .text {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     width: 654px;
+    margin-right: 50%;
 }
 
 .informaton h3 {
@@ -812,7 +820,7 @@ main {
 }
 
 .informaton .contact .btn:hover {
-    background-color: var(--primary-color);
+    box-shadow: 0 7px 30px rgb(239 110 13 / 30%);
 }
 
 .informaton .image-respo {
@@ -825,9 +833,17 @@ main {
     }
 }
 
+@media (max-width:1199px) {
+    .informaton .image {
+        position: static;
+        margin-right: 80px;
+    }
+}
+
 @media (max-width:767px) {
     .informaton {
         flex-direction: column;
+        padding: 0;
     }
     .informaton .image img {
         margin-bottom: 15px;
@@ -969,9 +985,9 @@ main {
 }
 
 .about .about-dr .info .btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--main-color);
     color: #FFF;
-    border-color: var(--primary-color);
+    border-color: var(--main-color);
 }
 
 .about .image {
@@ -1094,6 +1110,10 @@ main {
     margin-bottom: 50px;
 }
 
+.more-service .row {
+    row-gap: 50px;
+}
+
 .more-service .box {
     display: flex;
     flex-direction: column;
@@ -1145,8 +1165,8 @@ main {
 }
 
 .more-service .info .btn:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
     color: #FFF;
 }
 
@@ -1343,22 +1363,14 @@ main {
     margin-top: 17px;
     font-size: 17px;
     font-weight: bold;
-    box-shadow: 0 7px 30px rgba(239, 110, 13, 0.3);
+    transition: all 0.3s ease-in-out;
     z-index: 2;
     position: relative;
     overflow: hidden;
 }
 
-.fitness .info .btn span {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    display: block;
-    color: #FFF;
-    background-color: #cb5e0b;
-    z-index: -1;
+.fitness .info .btn:hover {
+    box-shadow: 7px 7px 30px rgba(239, 110, 13, 0.3);
 }
 
 .fitness .divid {
@@ -1488,7 +1500,7 @@ table tfoot .two {
     background-position: top left;
     background-repeat: no-repeat;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .sign .date {
@@ -1588,22 +1600,14 @@ table tfoot .two {
     border: 1px solid var(--main-color);
     font-size: 17px;
     font-weight: bold;
-    box-shadow: 0 7px 30px rgba(239, 110, 13, 0.3);
     z-index: 2;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-.sign .info .btn span {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    display: block;
-    color: #FFF;
-    background-color: #cb5e0b;
-    z-index: -1;
+.sign .info .btn:hover {
+    box-shadow: 7px 7px 30px rgba(239, 110, 13, 0.3);
 }
 
 @media (min-width:1200px) {
@@ -1669,7 +1673,7 @@ table tfoot .two {
     background-image: url(../image/testimonials.png);
     background-position: top left;
     background-repeat: repeat-x;
-    padding-bottom: 70px;
+    padding-bottom: 95px;
     padding-top: 95px;
 }
 
@@ -1789,7 +1793,6 @@ table tfoot .two {
 .artical .box {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    max-width: 360px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -1831,10 +1834,11 @@ table tfoot .two {
 
 .artical .swiper-slide img {
     max-width: 100%;
+    width: 100%;
 }
 
 .artical .swiper-pagination {
-    bottom: -50px;
+    bottom: -30px;
 }
 
 .artical .swiper-pagination-bullet {
@@ -1942,8 +1946,9 @@ table tfoot .two {
 .ask .image {
     position: absolute;
     width: 50%;
-    left: 643px;
+    left: 800px;
     top: 63px;
+    max-width: fit-content;
 }
 
 .ask .image span {
@@ -2236,8 +2241,36 @@ table tfoot .two {
 
 .select2-container--open .select2-dropdown--below {
     border-top: none;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    display: none;
+}
+
+.select2-search--dropdown {
+    display: block;
+    padding: 0;
+}
+
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.select2-results__option {
+    padding: 6px 29px;
+}
+
+.select2-dropdown {
+    border: 1px solid #d5e5ef;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.1);
 }
 
 /* Start footer */
@@ -2328,6 +2361,12 @@ table tfoot .two {
     line-height: 28px;
     color: #8bb1ff;
     width: fit-content;
+    transition: 0.3s all ease-in-out;
+}
+
+.footer .link a:hover {
+    transform: translateX(-10px);
+    color: #FFF;
 }
 
 .footer .link .title i ,
@@ -2350,6 +2389,7 @@ table tfoot .two {
     line-height: 28px;
     color: #8bb1ff;
     width: fit-content;
+    transition: 0.3s all ease-in-out;
 }
 
 .footer .center .person a {
@@ -2358,6 +2398,13 @@ table tfoot .two {
     line-height: 28px;
     color: #8bb1ff;
     width: fit-content;
+    transition: 0.3s all ease-in-out;
+}
+
+.footer .center .person a:hover,
+.footer .center .serve a:hover {
+    transform: translateX(-10px);
+    color: #FFF;
 }
 
 @media (max-width:992px) {

@@ -164,6 +164,7 @@ overflow.className = "overflow"
 menu.onclick = function () {
     nav.classList.add("open");
     upperlogo.classList.add("open");
+    close.classList.add("open");
     document.body.appendChild(modal);
     document.body.style.overflow = "hidden";
 };
@@ -180,6 +181,7 @@ close.onclick = function () {
     upperlogo.classList.remove("open");
     modal.remove('.popup');
     document.body.style.overflow = "auto";
+    close.classList.remove("open");
 };
 
 document.onkeyup = function (e) {
@@ -232,15 +234,15 @@ $(document).ready(function() {
     } 
 
     //for button
-    $('.btn').hover(function () {
-        $(this).find('span').animate({
-            width: '100%'
-        },300);
-      }, function() {
-        $(this).find('span').animate({
-            width: 0
-        },300);
-      });
+    // $('.btn').hover(function () {
+    //     $(this).find('span').animate({
+    //         width: '100%'
+    //     },300);
+    //   }, function() {
+    //     $(this).find('span').animate({
+    //         width: 0
+    //     },300);
+    //   });
 
       $('.say').select2();
       $(".say").select2({
